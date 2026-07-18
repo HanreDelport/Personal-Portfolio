@@ -1,0 +1,35 @@
+.subcard {
+  flex: 0 0 auto;
+  min-width: 160px;
+  background-color: var(--color-card);
+  border-radius: 12px;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.subcard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.subcard-title {
+  color: var(--color-cyan);
+  font-size: 1.1rem;
+  transition: font-size 0.2s ease;
+}
+
+.subcard-open {
+  min-width: 220px;
+}
+
+.subcard-open .subcard-title {
+  font-size: 0.9rem;
+}
+
+.subcard-content {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
