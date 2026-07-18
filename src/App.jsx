@@ -1,17 +1,13 @@
 import Hero from './components/Hero'
-import ExpandableCardRow from './components/ExpandableCardRow'
-
-const testItems = [
-  { title: 'Interests', content: <p>Theatre, musicals, comedy shows.</p> },
-  { title: 'Hobbies', content: <p>Gym, padel, gaming.</p> },
-  { title: 'Dreams', content: <p>CEO of a tech start-up.</p> },
-]
+import AboutMe from './components/AboutMe'
+import Projects from './components/Projects'
 
 function App() {
   return (
     <div className="app">
       <Hero />
-      <ExpandableCardRow title="def getAboutMe(self):" items={testItems} />
+      <AboutMe />
+      <Projects />
     </div>
   )
 }

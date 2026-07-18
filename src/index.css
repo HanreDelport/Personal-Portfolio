@@ -22,3 +22,48 @@ body {
   font-family: var(--font-mono);
   min-height: 100vh;
 }
+
+.detail-label {
+  color: var(--color-purple);
+  font-weight: 500;
+}
+
+.project-thumbnail-placeholder {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+
+.tech-tag {
+  background-color: rgba(77, 208, 225, 0.15);
+  color: var(--color-cyan);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--color-orange);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}

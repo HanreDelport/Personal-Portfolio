@@ -1,0 +1,3 @@
+It works, but i would like to have the hero at the center top, then I would like to have all the main cards one fixed size and they should be horizontally scrollable.
+But they should take up the rest of the height of the screen (that the hero leaves open). I want them to be rectangular.
+When I click on one of them they should expand to a much bigger square, and make everything in the bacground blur.
