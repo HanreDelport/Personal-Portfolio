@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Hero from './components/Hero'
 import AboutMe from './components/AboutMe'
 import Projects from './components/Projects'
+import Skills from './components/Skills'
 
 function App() {
   const [expandedCard, setExpandedCard] = useState(null)
@@ -26,6 +27,10 @@ function App() {
         <Projects
           isExpanded={expandedCard === 'projects'}
           onToggle={() => toggleCard('projects')}
+        />
+        <Skills
+          isExpanded={expandedCard === 'skills'}
+          onToggle={() => toggleCard('skills')}
         />
       </div>
     </div>

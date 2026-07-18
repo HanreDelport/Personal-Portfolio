@@ -85,3 +85,9 @@ body {
   -webkit-backdrop-filter: blur(8px);
   z-index: 90;
 }
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
