@@ -64,11 +64,13 @@ const aboutMeItems = [
   },
 ]
 
-function AboutMe() {
+function AboutMe({ isExpanded, onToggle }) {
   return (
     <ExpandableCardRow
       title="def getAboutMe(self):"
       items={aboutMeItems}
+      isExpanded={isExpanded}
+      onToggle={onToggle}
     />
   )
 }

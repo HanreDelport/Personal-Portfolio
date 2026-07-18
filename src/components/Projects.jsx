@@ -62,11 +62,13 @@ const projectItems = [
   },
 ]
 
-function Projects() {
+function Projects({ isExpanded, onToggle }) {
   return (
     <ExpandableCardRow
       title="def getProjects(self):"
       items={projectItems}
+      isExpanded={isExpanded}
+      onToggle={onToggle}
     />
   )
 }

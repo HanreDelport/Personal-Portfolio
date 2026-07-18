@@ -2,7 +2,23 @@
   background-color: var(--color-card);
   border-radius: 16px;
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  flex: 0 0 auto;
+  width: 260px;
+  height: 340px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-row-container:not(.card-expanded) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-row-container:not(.card-expanded):hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .card-header {
@@ -18,7 +34,7 @@
 
 .card-title {
   color: var(--color-orange);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .card-row {
@@ -27,4 +43,31 @@
   overflow-x: auto;
   margin-top: 1.25rem;
   padding-bottom: 0.5rem;
+}
+
+.card-expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 1000px;
+  height: 80vmin;
+  max-height: 700px;
+  z-index: 100;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-expanded .card-row {
+  flex: 1;
+  min-height: 0;
+}
+
+.card-expanded .subcard {
+  flex: 1 1 240px;
+  min-width: 240px;
+  height: 100%;
 }
