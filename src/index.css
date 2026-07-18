@@ -84,6 +84,12 @@ body {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 90;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .skill-tags {
@@ -145,4 +151,28 @@ body {
 
 .contact-form button:hover {
   opacity: 0.85;
+}
+
+@media (max-width: 640px) {
+  .hero-text {
+    font-size: 1.8rem;
+  }
+
+  .card-row-container,
+  .simple-card {
+    width: 200px;
+    height: 260px;
+  }
+
+  .card-expanded,
+  .simple-card-expanded {
+    width: 92vw;
+    height: 75vh;
+    max-width: none;
+  }
+
+  .cards-viewport {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
 }
