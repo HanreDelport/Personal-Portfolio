@@ -1,64 +1,27 @@
 import ExpandableCardRow from './ExpandableCardRow'
+import TagList from './TagList'
 
 const skillItems = [
   {
-    title: 'Programming',
-    content: (
-      <div className="skill-tags">
-        <span className="tech-tag">Python</span>
-        <span className="tech-tag">Java</span>
-        <span className="tech-tag">C#</span>
-        <span className="tech-tag">C++</span>
-        <span className="tech-tag">SQL</span>
-        <span className="tech-tag">JavaScript</span>
-      </div>
-    ),
-  },
-  {
-    title: 'Frameworks',
-    content: (
-      <div className="skill-tags">
-        <span className="tech-tag">FastAPI</span>
-        <span className="tech-tag">.NET MAUI</span>
-        <span className="tech-tag">React Native</span>
-      </div>
-    ),
-  },
-  {
-    title: 'Databases',
-    content: (
-      <div className="skill-tags">
-        <span className="tech-tag">MySQL</span>
-        <span className="tech-tag">SQLite</span>
-        <span className="tech-tag">Firebase Realtime Database</span>
-      </div>
-    ),
-  },
-  {
-    title: 'Tools',
-    content: (
-      <div className="skill-tags">
-        <span className="tech-tag">Git</span>
-        <span className="tech-tag">GitHub</span>
-        <span className="tech-tag">Docker</span>
-        <span className="tech-tag">Visual Studio</span>
-        <span className="tech-tag">VS Code</span>
-        <span className="tech-tag">PyCharm</span>
-      </div>
-    ),
-  },
-  {
-    title: 'Concepts',
-    content: (
-      <div className="skill-tags">
-        <span className="tech-tag">REST APIs</span>
-        <span className="tech-tag">Object-Oriented Programming</span>
-        <span className="tech-tag">Data Structures</span>
-        <span className="tech-tag">Software Design</span>
-        <span className="tech-tag">Networking Fundamentals</span>
-      </div>
-    ),
-  },
+  title: 'Programming',
+  content: <TagList tags={['Python', 'Java', 'C#', 'C++', 'SQL', 'JavaScript']} color="purple" />,
+},
+{
+  title: 'Frameworks',
+  content: <TagList tags={['FastAPI', '.NET MAUI', 'React Native']} color="purple" />,
+},
+{
+  title: 'Databases',
+  content: <TagList tags={['MySQL', 'SQLite', 'Firebase Realtime Database']} color="purple" />,
+},
+{
+  title: 'Tools',
+  content: <TagList tags={['Git', 'GitHub', 'Docker', 'Visual Studio', 'VS Code', 'PyCharm']} color="purple" />,
+},
+{
+  title: 'Concepts',
+  content: <TagList tags={['REST APIs', 'Object-Oriented Programming', 'Data Structures', 'Software Design', 'Networking Fundamentals']} color="purple" />,
+},
 ]
 
 function Skills({ isExpanded, onToggle }) {

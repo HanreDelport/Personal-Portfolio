@@ -13,9 +13,18 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
+.subcard-icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 0.5rem;
+  filter: invert(1);
+}
+
 .subcard-title {
   color: var(--color-cyan);
   font-size: 1.1rem;
+  text-align: center;
   transition: font-size 0.2s ease;
 }
 

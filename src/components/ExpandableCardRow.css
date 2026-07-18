@@ -1,10 +1,11 @@
 .card-row-container {
+  width: calc((100vw - 4rem - 3rem) / 2.5);
+  min-width: 300px;
+  height: 340px;
   background-color: var(--color-card);
   border-radius: 16px;
   padding: 1.5rem;
   flex: 0 0 auto;
-  width: 260px;
-  height: 340px;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }

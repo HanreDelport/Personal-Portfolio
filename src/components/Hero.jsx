@@ -25,7 +25,7 @@ function Hero() {
   return (
     <section className="hero">
       <h1 className="hero-text">
-        <span className="hero-keyword">{keyword}</span>
+        <span className="hero-class">{keyword}</span>
         <span className="hero-name">{name}</span>
         <span className="hero-keyword">{colon}</span>
         <span className="cursor">|</span>

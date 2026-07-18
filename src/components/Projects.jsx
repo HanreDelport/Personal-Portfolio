@@ -1,4 +1,5 @@
 import ExpandableCardRow from './ExpandableCardRow'
+import TagList from './TagList'
 
 const projectItems = [
   {
@@ -11,15 +12,7 @@ const projectItems = [
           and orders — with support for multi-level Bill of Materials (BOMs),
           inventory tracking, and procurement management.
         </p>
-        <div className="tech-tags">
-          <span className="tech-tag">Python 3.11</span>
-          <span className="tech-tag">FastAPI</span>
-          <span className="tech-tag">SQLAlchemy</span>
-          <span className="tech-tag">MySQL 8.0</span>
-          <span className="tech-tag">React</span>
-          <span className="tech-tag">Vite</span>
-          <span className="tech-tag">Axios</span>
-        </div>
+        <TagList tags={['Python 3.11', 'FastAPI', 'SQLAlchemy', 'MySQL 8.0', 'React', 'Vite', 'Axios']} color="purple" />
         
         <a
           href="https://github.com/HanreDelport/Inventory-Manager"
@@ -43,13 +36,7 @@ const projectItems = [
           monitor time spent on different activities with a clean, intuitive
           interface.
         </p>
-        <div className="tech-tags">
-          <span className="tech-tag">Python 3.10+</span>
-          <span className="tech-tag">PyQt6</span>
-          <span className="tech-tag">SQLite3</span>
-          <span className="tech-tag">Qt Designer</span>
-          <span className="tech-tag">PyInstaller</span>
-        </div>
+        <TagList tags={['Python 3.10+', 'PyQt6', 'SQLite3', 'Qt Designer', 'PyInstaller']} color="purple" />
         
         <a
           href="https://github.com/HanreDelport/Time-Tracker"

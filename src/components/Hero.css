@@ -17,7 +17,11 @@
   color: var(--color-cyan);
 }
 
-.hero-keyword {
+.hero-class {
+  color: var(--color-blue-dark);
+}
+
+.hero-colon {
   color: var(--color-text);
 }
 
