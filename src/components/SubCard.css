@@ -42,3 +42,11 @@
   color: var(--color-text);
   line-height: 1.5;
 }
+
+.subcard-icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 0.5rem;
+  filter: invert(1);
+}

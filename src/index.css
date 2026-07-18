@@ -42,21 +42,6 @@ body {
   margin-bottom: 0.75rem;
 }
 
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 0.75rem 0;
-}
-
-.tech-tag {
-  background-color: rgba(77, 208, 225, 0.15);
-  color: var(--color-cyan);
-  font-size: 0.75rem;
-  padding: 0.2rem 0.6rem;
-  border-radius: 999px;
-}
-
 .project-link {
   display: inline-block;
   margin-top: 0.5rem;
@@ -91,12 +76,6 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
 }
 
 .highlight-list {

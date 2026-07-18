@@ -1,8 +1,16 @@
 import ExpandableCardRow from './ExpandableCardRow'
 
+import interestsIcon from '../assets/icons/interests.png'
+import hobbiesIcon from '../assets/icons/hobbies.png'
+import dreamsIcon from '../assets/icons/dreams.png'
+import goalsIcon from '../assets/icons/goals.png'
+import aspirationsIcon from '../assets/icons/aspirations.png'
+import dislikesIcon from '../assets/icons/dislikes.png'
+
 const aboutMeItems = [
   {
     title: 'Interests',
+    icon: interestsIcon,
     content: (
       <>
         <p><span className="detail-label">culture</span> = [Theatre, Musicals, Comedy Shows]</p>
@@ -13,6 +21,7 @@ const aboutMeItems = [
   },
   {
     title: 'Hobbies',
+    icon: hobbiesIcon,
     content: (
         <>
             <p><span className="detail-label">fitness</span> = Gym (Mon/Tues/Thurs)</p>
@@ -24,6 +33,7 @@ const aboutMeItems = [
   },
   {
     title: 'Dreams',
+    icon: dreamsIcon,
     content: (
       <>
         <p><span className="detail-label">dreamJob</span> = CEO of tech start-up</p>
@@ -34,6 +44,7 @@ const aboutMeItems = [
   },
   {
     title: 'Goals',
+    icon: goalsIcon,
     content: (
       <>
         <p><span className="detail-label">shortTerm</span> = Acquire honours and MBA at NWU</p>
@@ -44,6 +55,7 @@ const aboutMeItems = [
   },
   {
     title: 'Aspirations',
+    icon: aspirationsIcon,
     content: (
       <>
         <p><span className="detail-label">personal</span> = Escape comfort zone</p>
@@ -54,6 +66,7 @@ const aboutMeItems = [
   },
   {
     title: 'Dislikes',
+    icon: dislikesIcon,
     content: (
       <>
         <p><span className="detail-label">personalPref</span> = [Noisy eaters, pessimists]</p>

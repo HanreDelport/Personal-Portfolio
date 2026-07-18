@@ -13,10 +13,10 @@ function ExpandableCardRow({ title, icon, items, isExpanded, onToggle }) {
       {isExpanded && (
         <div className="card-row">
           {items.map((item) => (
-            <SubCard key={item.title} title={item.title}>
-              {item.content}
-            </SubCard>
-          ))}
+          <SubCard key={item.title} title={item.title} icon={item.icon}>
+            {item.content}
+          </SubCard>
+        ))}
         </div>
       )}
     </div>
