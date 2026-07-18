@@ -1,7 +1,9 @@
+import Hero from './components/Hero'
+
 function App() {
   return (
     <div className="app">
-      <h1>Hanre Delport - Portfolio</h1>
+      <Hero />
     </div>
   )
 }

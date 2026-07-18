@@ -1,0 +1,37 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.hero-name {
+  color: var(--color-cyan);
+}
+
+.hero-keyword {
+  color: var(--color-text);
+}
+
+.cursor {
+  display: inline-block;
+  color: var(--color-text);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
