@@ -3,6 +3,8 @@ import Hero from './components/Hero'
 import AboutMe from './components/AboutMe'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
+import Resume from './components/Resume'
+import Contact from './components/Contact'
 
 function App() {
   const [expandedCard, setExpandedCard] = useState(null)
@@ -31,6 +33,14 @@ function App() {
         <Skills
           isExpanded={expandedCard === 'skills'}
           onToggle={() => toggleCard('skills')}
+        />
+        <Resume
+          isExpanded={expandedCard === 'resume'}
+          onToggle={() => toggleCard('resume')}
+        />
+        <Contact
+          isExpanded={expandedCard === 'contact'}
+          onToggle={() => toggleCard('contact')}
         />
       </div>
     </div>

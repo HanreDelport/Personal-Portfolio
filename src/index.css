@@ -91,3 +91,58 @@ body {
   flex-wrap: wrap;
   gap: 0.5rem;
 }
+
+.highlight-list {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  color: var(--color-text);
+}
+
+.highlight-list li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-cyan);
+}
+
+.contact-form button {
+  background-color: var(--color-cyan);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  opacity: 0.85;
+}

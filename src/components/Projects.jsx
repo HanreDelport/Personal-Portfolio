@@ -21,11 +21,12 @@ const projectItems = [
           <span className="tech-tag">Axios</span>
         </div>
         
+        <a
           href="https://github.com/HanreDelport/Inventory-Manager"
           target="_blank"
           rel="noopener noreferrer"
-          className="project-link"
-        <a>
+          className="project-link">
+
           View on GitHub →
         </a>
       </>
@@ -50,11 +51,12 @@ const projectItems = [
           <span className="tech-tag">PyInstaller</span>
         </div>
         
+        <a
           href="https://github.com/HanreDelport/Time-Tracker"
           target="_blank"
           rel="noopener noreferrer"
-          className="project-link"
-        <a>
+          className="project-link">
+
           View on GitHub →
         </a>
       </>
