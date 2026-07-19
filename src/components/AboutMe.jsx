@@ -1,4 +1,5 @@
 import ExpandableCardRow from './ExpandableCardRow'
+import TagList from './TagList'
 
 import interestsIcon from '../assets/icons/interests.png'
 import hobbiesIcon from '../assets/icons/hobbies.png'
@@ -9,71 +10,29 @@ import dislikesIcon from '../assets/icons/dislikes.png'
 
 const aboutMeItems = [
   {
-    title: 'Interests',
-    icon: interestsIcon,
-    content: (
-      <>
-        <p><span className="detail-label">culture</span> = [Theatre, Musicals, Comedy Shows]</p>
-        <p><span className="detail-label">sport</span> = [Golf, Gym, Padel]</p>
-        <p><span className="detail-label">tech</span> = [Gaming, Coding, Cyber Security]</p>
-      </>
-    ),
-  },
-  {
     title: 'Hobbies',
-    icon: hobbiesIcon,
-    content: (
-        <>
-            <p><span className="detail-label">fitness</span> = Gym (Mon/Tues/Thurs)</p>
-            <p><span className="detail-label">sport</span> = Padel (Fri/Sat)</p>
-            <p><span className="detail-label">outdoors</span> = Swimming</p>
-            <p><span className="detail-label">downtime</span> = Binge-watching series</p>
-        </>
-    ),
+    icon: interestsIcon,
+    content: <TagList tags={['Theatre Plays', 'Golf', 'Gym', 'Padel', 'Gaming', 'Programming']} color="purple" />,
   },
   {
     title: 'Dreams',
     icon: dreamsIcon,
-    content: (
-      <>
-        <p><span className="detail-label">dreamJob</span> = CEO of tech start-up</p>
-        <p><span className="detail-label">dreamCar</span> = Porsche 911 GT3 RS</p>
-        <p><span className="detail-label">dreamProperty</span> = Sea-view apartment</p>
-      </>
-    ),
+    content: <TagList tags={['Tech Start-up CEO', 'Porsche 911 GT3 RS', 'Sea-view apartment']} color="purple" />,
   },
   {
     title: 'Goals',
     icon: goalsIcon,
-    content: (
-      <>
-        <p><span className="detail-label">shortTerm</span> = Acquire honours and MBA at NWU</p>
-        <p><span className="detail-label">mediumTerm</span> = Complete first project as a project manager</p>
-        <p><span className="detail-label">longTerm</span> = Buy my first company</p>
-      </>
-    ),
+    content: <TagList tags={['Acquire honours and MBA', ' Complete first project as a project manager', 'Buy my first company']} color="purple" />,
   },
   {
     title: 'Aspirations',
     icon: aspirationsIcon,
-    content: (
-      <>
-        <p><span className="detail-label">personal</span> = Escape comfort zone</p>
-        <p><span className="detail-label">relationships</span> = [Find soulmate, raise family]</p>
-        <p><span className="detail-label">impact</span> = Leave lasting legacy</p>
-      </>
-    ),
+    content: <TagList tags={['Escape Comfort Zone', 'Raise a Family', 'Leave Lasting Legacy']} color="purple" />,
   },
   {
     title: 'Dislikes',
     icon: dislikesIcon,
-    content: (
-      <>
-        <p><span className="detail-label">personalPref</span> = [Noisy eaters, pessimists]</p>
-        <p><span className="detail-label">techPeeves</span> = [Slow internet, tangled wires]</p>
-        <p><span className="detail-label">quirks</span> = [Wet socks, scratching on blackboard]</p>
-      </>
-    ),
+    content: <TagList tags={['Slow Internet', 'Tangled Wires', 'Pessimists','Wet socks']} color="purple" />,
   },
 ]
 
