@@ -4,8 +4,8 @@ import { formatMethodTitle } from '../utils/formatTitle'
 
 function ExpandableCardRow({ title, icon, items, isExpanded, onToggle }) {
   return (
-    <div className={`card-row-container ${isExpanded ? 'card-expanded' : ''}`}>
-      <div className="card-header" onClick={onToggle}>
+    <div className={`card-row-container ${isExpanded ? 'card-expanded' : ''}`} onClick={onToggle}>
+      <div className="card-header">
         {icon && <span className="card-icon">{icon}</span>}
         <h2 className="card-title">{formatMethodTitle(title)}</h2>
       </div>

@@ -3,8 +3,8 @@ import { formatMethodTitle } from '../utils/formatTitle'
 
 function SimpleExpandableCard({ title, isExpanded, onToggle, children }) {
   return (
-    <div className={`simple-card ${isExpanded ? 'simple-card-expanded' : ''}`}>
-      <div className="card-header" onClick={onToggle}>
+    <div className={`simple-card ${isExpanded ? 'simple-card-expanded' : ''}`}  onClick={onToggle}>
+      <div className="card-header">
         <h2 className="card-title">{formatMethodTitle(title)}</h2>
       </div>
 
