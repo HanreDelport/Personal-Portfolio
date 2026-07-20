@@ -11,7 +11,7 @@ function ExpandableCardRow({ title, icon, items, isExpanded, onToggle }) {
         onToggle();
       }
     }}>
-      <div className="card-header">
+      <div className="card-header" onClick={onToggle}>
         {icon && <span className="card-icon">{icon}</span>}
         <h2 className="card-title">{formatMethodTitle(title)}</h2>
       </div>

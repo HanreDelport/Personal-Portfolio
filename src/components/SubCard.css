@@ -5,7 +5,10 @@
   border-radius: 12px;
   padding: 1.25rem;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;display: flex;
+  flex-direction: column;
+  justify-content: center;   /* Vertical centering */
+  align-items: center;   /* Horizontal centering */     
 }
 
 .subcard:hover {

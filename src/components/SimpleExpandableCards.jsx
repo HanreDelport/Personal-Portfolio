@@ -9,7 +9,7 @@ function SimpleExpandableCard({ title, isExpanded, onToggle, children }) {
           onToggle();
         }
       }}>
-      <div className="card-header">
+      <div className="card-header" onClick={onToggle}>
         <h2 className="card-title">{formatMethodTitle(title)}</h2>
       </div>
 
