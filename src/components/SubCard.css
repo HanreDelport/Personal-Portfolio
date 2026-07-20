@@ -29,7 +29,8 @@
 }
 
 .subcard-open {
-  min-width: 220px;
+  flex: 0 0 350px;
+  width: 350px;
 }
 
 .subcard-open .subcard-title {
@@ -41,6 +42,10 @@
   font-size: 0.85rem;
   color: var(--color-text);
   line-height: 1.5;
+  flex: 1;
+  min-height: 0;          /* critical: lets flex child shrink below content size */
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .subcard-icon {
