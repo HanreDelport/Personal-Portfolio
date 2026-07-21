@@ -1,12 +1,22 @@
 import ExpandableCardRow from './ExpandableCardRow'
 import TagList from './TagList'
 
+import dijkstraTNail from '../assets/projectPics/Dijkstra.png'
+import InventoryTNail from '../assets/projectPics/InventoryM.png'
+import LockedInTNail from '../assets/projectPics/LockedIn.png'
+import PotholeTNail from '../assets/projectPics/PotholeStroom.png'
+import TimeTNail from '../assets/projectPics/TimeTracker.png'
+
 const projectItems = [
   {
     title: 'Inventory Manager',
     content: (
       <>
-        <div className="project-thumbnail-placeholder">Image coming soon</div>
+        <img
+          src={InventoryTNail}
+          alt="Inventory Management System"
+          className="project-thumbnail"
+        />
         <p>
           A production-ready web application for managing stock, production,
           and orders — with support for multi-level Bill of Materials (BOMs),
@@ -22,6 +32,15 @@ const projectItems = [
 
           View on GitHub →
         </a>
+
+        <a
+          href="https://inventory-manager-frontend-5bhs.onrender.com/components"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-link">
+
+          Test it out →
+        </a>
       </>
     ),
   },
@@ -29,7 +48,11 @@ const projectItems = [
     title: 'PotholeStroom',
     content: (
       <>
-        <div className="project-thumbnail-placeholder">Image coming soon</div>
+        <img
+          src={PotholeTNail}
+          alt="PotholeStroom"
+          className="project-thumbnail"
+        />
         <p>
           Community-driven mobile application that enables road users to report 
           potholes and allows community members to contribute towards funding their 
@@ -56,7 +79,11 @@ const projectItems = [
     title: 'Time-Tracker',
     content: (
       <>
-        <div className="project-thumbnail-placeholder">Image coming soon</div>
+        <img
+          src={TimeTNail}
+          alt="Time Tracker"
+          className="project-thumbnail"
+        />
         <p>
           A desktop application for tracking work hours across projects and
           tasks. Built with Python and PyQt6, this lightweight tool helps you
@@ -80,7 +107,11 @@ const projectItems = [
     title: 'Locked-In',
     content: (
       <>
-        <div className="project-thumbnail-placeholder">Image coming soon</div>
+        <img
+          src={LockedInTNail}
+          alt="LockedIn"
+          className="project-thumbnail"
+        />
         <p>
           A Computerized system for the Tlokweng Correctional Facility to 
           automate and manage their community help initiative. Employers
@@ -107,7 +138,11 @@ const projectItems = [
     title: 'Dijkstra Pathfinding Visualizer',
     content: (
       <>
-        <div className="project-thumbnail-placeholder">Image coming soon</div>
+        <img
+          src={dijkstraTNail}
+          alt="Dijkstra Pathfinding Visualizer"
+          className="project-thumbnail"
+        />
         <p>
           An interactive web application that demonstrates how Dijkstra's 
           shortest-path algorithm explores a grid and calculates the optimal
