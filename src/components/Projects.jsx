@@ -7,9 +7,16 @@ import LockedInTNail from '../assets/projectPics/LockedIn.png'
 import PotholeTNail from '../assets/projectPics/PotholeStroom.png'
 import TimeTNail from '../assets/projectPics/TimeTracker.png'
 
+import clockIcon from '../assets/icons/clock.png'
+import inventoryIcon from '../assets/icons/inventory.png'
+import jailIcon from '../assets/icons/jail.png'
+import mazeIcon from '../assets/icons/maze.png'
+import potholeIcon from '../assets/icons/pothole.png'
+
 const projectItems = [
   {
     title: 'Inventory Manager',
+    icon: inventoryIcon,
     content: (
       <>
         <img
@@ -46,6 +53,7 @@ const projectItems = [
   },
   {
     title: 'PotholeStroom',
+    icon: potholeIcon,
     content: (
       <>
         <img
@@ -77,6 +85,7 @@ const projectItems = [
   },
   {
     title: 'Time-Tracker',
+    icon: clockIcon,
     content: (
       <>
         <img
@@ -105,6 +114,7 @@ const projectItems = [
   },
   {
     title: 'Locked-In',
+    icon: jailIcon,
     content: (
       <>
         <img
@@ -136,6 +146,7 @@ const projectItems = [
   },
   {
     title: 'Dijkstra Pathfinding Visualizer',
+    icon: mazeIcon,
     content: (
       <>
         <img
