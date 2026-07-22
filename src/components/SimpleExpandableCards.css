@@ -21,7 +21,10 @@
 
 .simple-card:not(.simple-card-expanded):hover {
   transform: translateY(-20px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.8),
+    0 0 18px color-mix(in srgb, var(--color-purple) 100%, transparent),
+    0 0 36px color-mix(in srgb, var(--color-purple) 50%, transparent);
 }
 
 .simple-card-expanded {
