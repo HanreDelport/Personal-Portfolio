@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="app">
       <div className="hero-scroll-wrapper">
-        <Hero />
+        <Hero onContactClick={() => toggleCard('contact')} />
         <IntroParagraph />
       </div>
 

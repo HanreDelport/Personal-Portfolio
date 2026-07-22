@@ -11,24 +11,6 @@ function Contact({ isExpanded, onToggle }) {
         <a href="mailto:hanredelport@gmail.com" className="project-link">
           Email: hanredelport@gmail.com
         </a>
-        
-        <a
-          href="https://www.linkedin.com/in/hanredelport/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-link">
-        
-          LinkedIn →
-        </a>
-        
-        <a
-          href="https://github.com/HanreDelport"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-link">
-        
-          GitHub →
-        </a>
       </div>
 
       <form
