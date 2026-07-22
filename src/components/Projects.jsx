@@ -41,7 +41,7 @@ const projectItems = [
         </a>
 
         <a
-          href="https://inventory-manager-frontend-5bhs.onrender.com/components"
+          href="https://inventory-manager-frontend-5bhs.onrender.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="project-link">
