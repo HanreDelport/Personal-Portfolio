@@ -1,0 +1,29 @@
+.intro-paragraph {
+  position: relative;
+  z-index: 1;
+  min-height: auto;
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-text {
+  max-width: 1200px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  line-height: 1.7;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.intro-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-docstring {
+  color: var(--color-orange);
+}
