@@ -133,6 +133,16 @@ body {
   opacity: 0.85;
 }
 
+/* Firefox *//*
+html {
+  scrollbar-width: none;
+}
+
+/* Chrome, Edge, Safari */ /*
+::-webkit-scrollbar {
+  display: none;
+} 
+
 /* Firefox */
 html {
   scrollbar-width: auto;
