@@ -1,4 +1,7 @@
 import SimpleExpandableCard from './SimpleExpandableCards'
+import './Resume.css'
+import resumeThumbnail from '../assets/CV/CVTNail.png' 
+import resumePDF from '../assets/CV/CV.pdf'
 
 function Resume({ isExpanded, onToggle }) {
   return (
@@ -8,20 +11,20 @@ function Resume({ isExpanded, onToggle }) {
       onToggle={onToggle}
     >
       <a
-        href="/resume.pdf"
+        href={resumePDF}
         target="_blank"
         rel="noopener noreferrer"
-        className="project-link">
-
-        Download Resume (PDF) →
+        className="resume-thumbnail-link"
+      >
+        <img
+          src={resumeThumbnail}
+          alt="Resume Preview"
+          className="resume-thumbnail"
+        />
       </a>
-
-      <ul className="highlight-list">
-        <li>3rd-year IT student — CMPG214, North-West University (Potchefstroom)</li>
-        <li>Built a full-stack Inventory Management system (FastAPI + React)</li>
-        <li>Developed a desktop time-tracking application in PyQt6</li>
-        <li>Comfortable across Python, Java, C#, C++, and JavaScript</li>
-      </ul>
+      <p className="resume-caption">
+        Click to open PDF
+      </p>
     </SimpleExpandableCard>
   )
 }
