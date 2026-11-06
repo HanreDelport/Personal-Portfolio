@@ -1,4 +1,5 @@
-import ExpandableCardRow from './ExpandableCardRow'
+import Section from './Section'
+import ItemGrid from './ItemGrid'
 import TagList from './TagList'
 
 import dijkstraTNail from '../assets/projectPics/Dijkstra.png'
@@ -176,14 +177,11 @@ const projectItems = [
   },
 ]
 
-function Projects({ isExpanded, onToggle }) {
+function Projects() {
   return (
-    <ExpandableCardRow
-      title="def getProjects(self):"
-      items={projectItems}
-      isExpanded={isExpanded}
-      onToggle={onToggle}
-    />
+    <Section id="projects" label="// 02" title="Projects">
+      <ItemGrid items={projectItems} />
+    </Section>
   )
 }
 

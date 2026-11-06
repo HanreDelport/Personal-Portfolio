@@ -7,6 +7,7 @@
   --color-purple: #c586c0;
   --color-text: #d4d4d4;
   --font-mono: 'Fira Code', 'JetBrains Mono', 'Source Code Pro', monospace;
+  --font-heading: 'Space Grotesk', 'Inter', system-ui, sans-serif;
 
   /* glass tokens */
   --glass-bg: rgba(255, 255, 255, 0.05);
@@ -36,4 +37,9 @@ body::before {
     radial-gradient(600px circle at 15% 20%, rgba(77, 208, 225, 0.14), transparent 60%),
     radial-gradient(700px circle at 85% 70%, rgba(197, 134, 192, 0.12), transparent 60%),
     radial-gradient(500px circle at 60% 10%, rgba(255, 157, 92, 0.07), transparent 60%);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
 }

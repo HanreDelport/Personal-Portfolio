@@ -1,15 +1,11 @@
-import SimpleExpandableCard from './SimpleExpandableCards'
+import Section from './Section'
 import './Resume.css'
-import resumeThumbnail from '../assets/CV/CVTNail.png' 
+import resumeThumbnail from '../assets/CV/CVTNail.png'
 import resumePDF from '../assets/CV/CV.pdf'
 
-function Resume({ isExpanded, onToggle }) {
+function Resume() {
   return (
-    <SimpleExpandableCard
-      title="def getResume(self):"
-      isExpanded={isExpanded}
-      onToggle={onToggle}
-    >
+    <Section id="resume" label="// 04" title="Resume">
       <a
         href={resumePDF}
         target="_blank"
@@ -22,10 +18,8 @@ function Resume({ isExpanded, onToggle }) {
           className="resume-thumbnail"
         />
       </a>
-      <p className="resume-caption">
-        Click to open PDF
-      </p>
-    </SimpleExpandableCard>
+      <p className="resume-caption">Click to open PDF</p>
+    </Section>
   )
 }
 

@@ -1,4 +1,5 @@
-import ExpandableCardRow from './ExpandableCardRow'
+import Section from './Section'
+import ItemGrid from './ItemGrid'
 import TagList from './TagList'
 
 import conceptIcon from '../assets/icons/concepts.png'
@@ -36,14 +37,11 @@ const skillItems = [
 },
 ]
 
-function Skills({ isExpanded, onToggle }) {
+function Skills() {
   return (
-    <ExpandableCardRow
-      title="def getSkills(self):"
-      items={skillItems}
-      isExpanded={isExpanded}
-      onToggle={onToggle}
-    />
+    <Section id="skills" label="// 03" title="Skills">
+      <ItemGrid items={skillItems} />
+    </Section>
   )
 }
 

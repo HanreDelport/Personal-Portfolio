@@ -1,12 +1,8 @@
-import SimpleExpandableCard from './SimpleExpandableCards.jsx'
+import Section from './Section'
 
-function Contact({ isExpanded, onToggle }) {
+function Contact() {
   return (
-    <SimpleExpandableCard
-      title="def getContact(self):"
-      isExpanded={isExpanded}
-      onToggle={onToggle}
-    >
+    <Section id="contact" label="// 05" title="Contact">
       <div className="contact-links">
         <a href="mailto:hanredelport@gmail.com" className="project-link">
           Email: hanredelport@gmail.com
@@ -23,7 +19,7 @@ function Contact({ isExpanded, onToggle }) {
         <textarea name="message" placeholder="Your message" rows="4" required />
         <button type="submit">Send</button>
       </form>
-    </SimpleExpandableCard>
+    </Section>
   )
 }
 

@@ -1,0 +1,25 @@
+.section {
+  min-height: 100svh;
+  padding: 6rem clamp(1.5rem, 6vw, 6rem) 3rem;
+  scroll-margin-top: 0;
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-cyan);
+  letter-spacing: 0.05em;
+}
+
+.section-title {
+  color: var(--color-orange);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+}

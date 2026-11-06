@@ -1,4 +1,5 @@
-import ExpandableCardRow from './ExpandableCardRow'
+import Section from './Section'
+import ItemGrid from './ItemGrid'
 import TagList from './TagList'
 
 import rolesIcon from '../assets/icons/role.png'
@@ -37,14 +38,11 @@ const aboutMeItems = [
   },
 ]
 
-function AboutMe({ isExpanded, onToggle }) {
+function AboutMe() {
   return (
-    <ExpandableCardRow
-      title="def getAboutMe(self):"
-      items={aboutMeItems}
-      isExpanded={isExpanded}
-      onToggle={onToggle}
-    />
+    <Section id="about" label="// 01" title="About">
+      <ItemGrid items={aboutMeItems} />
+    </Section>
   )
 }
 
