@@ -5,7 +5,6 @@
   align-items: center;
   gap: clamp(2rem, 5vw, 5rem);
   padding: 6rem clamp(1.5rem, 6vw, 6rem) 3rem;
-  background-color: var(--color-bg);
 }
 
 .hero-main {

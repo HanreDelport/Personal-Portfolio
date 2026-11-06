@@ -8,7 +8,8 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;display: flex;
   flex-direction: column;
   justify-content: center;   /* Vertical centering */
-  align-items: center;   /* Horizontal centering */     
+  align-items: center;   /* Horizontal centering */    
+  border: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
 .subcard:hover {

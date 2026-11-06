@@ -2,7 +2,10 @@
   width: calc((100vw - 4rem - 3rem) / 2.5);
   min-width: 300px;
   height: 340px;
-  background-color: var(--color-card);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border-radius: 16px;
   padding: 1.5rem;
   flex: 0 0 auto;
@@ -51,6 +54,9 @@
 }
 
 .card-expanded {
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(28px) saturate(140%);
+  -webkit-backdrop-filter: blur(28px) saturate(140%);
   position: fixed;
   top: 50%;
   left: 50%;
