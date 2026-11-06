@@ -1,6 +1,6 @@
 import { useState } from 'react'
+import Navbar from './components/NavBar'
 import Hero from './components/Hero'
-import IntroParagraph from './components/IntroParagraph'
 import AboutMe from './components/AboutMe'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
@@ -14,12 +14,17 @@ function App() {
     setExpandedCard(expandedCard === cardId ? null : cardId)
   }
 
+  const openCard = (cardId) => setExpandedCard(cardId)
+
+  const goHome = () => {
+    setExpandedCard(null)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <div className="app">
-      <div className="hero-scroll-wrapper">
-        <Hero onContactClick={() => toggleCard('contact')} />
-        <IntroParagraph />
-      </div>
+      <Navbar activeCard={expandedCard} onNavigate={openCard} onHome={goHome} />
+      <Hero />
 
       {expandedCard && (
         <div className="backdrop" onClick={() => setExpandedCard(null)} />

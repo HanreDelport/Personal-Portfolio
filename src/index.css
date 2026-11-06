@@ -55,12 +55,12 @@ body {
 }
 
 .cards-viewport {
-  height: 65vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   gap: 1.5rem;
   overflow-x: auto;
-  padding: 0 2rem;
+  padding: 64px 2rem 0; /* 64px = navbar height */
 }
 
 .backdrop {
@@ -191,23 +191,6 @@ html {
   margin-bottom: 1rem;
   object-fit: cover;
   display: block;
-}
-
-@media (max-width: 640px) {
-  .hero-text {
-    font-size: 1.8rem;
-  }
-
-  .card-row-container,
-  .simple-card {
-    width: 200px;
-    height: 260px;
-  }
-
-  .cards-viewport {
-    padding: 0 1rem;
-    gap: 1rem;
-  }
 }
 
 .title-keyword {

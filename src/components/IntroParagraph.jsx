@@ -23,8 +23,7 @@ function IntroParagraph() {
   return (
     <section className="intro-paragraph" ref={ref}>
       <p className={`intro-text ${isVisible ? 'intro-visible' : ''}`}>
-        <span className="intro-docstring">"""</span><br />
-        Hey, I'm Hanré 👋 <br /><br />
+        <span className="intro-docstring"></span><br />
         Welcome to my little corner of the internet.
         I'm a BSc Information Technology student at North-West University (NWU) with a passion for
         building software that solves real-world problems. I enjoy working across the full stack
@@ -34,7 +33,7 @@ function IntroParagraph() {
         that make a meaningful impact. Feel free to explore my work, and thanks for stopping by!<br /><br />
         "The people who are crazy enough to think they can change the world are the ones who do." ~ Steve Jobs
         <br />
-        <span className="intro-docstring">"""</span>
+        <span className="intro-docstring"></span>
       </p>
     </section>
   )
