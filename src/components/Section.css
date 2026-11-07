@@ -1,7 +1,8 @@
 .section {
-  min-height: 100svh;
-  padding: 6rem clamp(1.5rem, 6vw, 6rem) 3rem;
-  scroll-margin-top: 0;
+  box-sizing: border-box;
+  min-height: calc(100svh - var(--nav-height));
+  padding: 2rem clamp(1.5rem, 6vw, 6rem) 3rem;
+  scroll-margin-top: var(--nav-height);
 }
 
 .section-heading {

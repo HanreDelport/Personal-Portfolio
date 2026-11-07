@@ -3,11 +3,12 @@
   top: 0.75rem;
   left: 0;
   right: 0;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
   padding: 0 clamp(1rem, 4vw, 3rem);
-  z-index: 110; /* above the card backdrop (90) and expanded cards (100) */
+  z-index: 110;
   pointer-events: none; /* only the pieces below catch clicks */
 }
 
@@ -15,32 +16,28 @@
   pointer-events: auto;
 }
 
-/* glass: links pill + socials pill only (NOT the logo) */
-.nav-links,
-.nav-social {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+/* blurred band behind everything */
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: -0.75rem;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  z-index: -1;
+  background: rgba(5, 5, 7, 0.35);
+  backdrop-filter: blur(30px) saturate(140%);
+  -webkit-backdrop-filter: blur(30px) saturate(140%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* plain logo, just left of the centre pill */
+/* plain logo, no pill */
 .nav-brand {
-  justify-self: start;
   display: flex;
   align-items: center;
-  width: auto;
-  height: auto;
   padding: 0;
   background: none;
   border: none;
-  border-radius: 0;
-  box-shadow: none;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
   cursor: pointer;
 }
 
@@ -50,10 +47,22 @@
   object-fit: contain;
 }
 
-/* centre pill */
+/* glass: links pill + mobile toggle */
+.nav-links,
+.nav-toggle {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
 .nav-links {
   display: flex;
   gap: 0.25rem;
+  margin: 0;
   padding: 0.35rem;
   border-radius: 999px;
   list-style: none;
@@ -83,39 +92,17 @@
   background: rgba(77, 208, 225, 0.15);
 }
 
-/* socials pill */
-.nav-social {
-  justify-self: end;
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  height: 48px;
-  padding: 0 1rem;
-  border-radius: 999px;
-}
-
-.nav-icon-link {
-  display: flex;
-  transition: transform 0.2s ease;
-}
-
-.nav-icon-link:hover {
-  transform: translateY(-3px);
-}
-
-.nav-icon {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-}
-
+/* hamburger: hidden on desktop */
 .nav-toggle {
   display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
-  background: none;
-  border: none;
-  padding: 4px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -129,13 +116,7 @@
 
 @media (max-width: 820px) {
   .navbar {
-    grid-template-columns: auto auto;
     justify-content: space-between;
-  }
-
-  .nav-brand {
-    justify-self: start;
-    margin-right: 0;
   }
 
   .nav-toggle {

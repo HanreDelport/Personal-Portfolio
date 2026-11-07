@@ -1,8 +1,6 @@
 import { useState } from 'react'
-import Github from '../assets/icons/github.png'
-import LinkedIn from '../assets/icons/linkedin.png'
 import profilePic from '../assets/icons/HD.png'
-import './Navbar.css'
+import './NavBar.css'
 
 const NAV_ITEMS = [
   { id: 'about', label: 'About' },
@@ -44,38 +42,16 @@ function Navbar({ activeCard, onNavigate, onHome }) {
         ))}
       </ul>
 
-      <div className="nav-social">
-        <a
-          href="https://github.com/HanreDelport"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="nav-icon-link"
-          aria-label="GitHub"
-        >
-          <img src={Github} alt="GitHub" className="nav-icon" />
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/hanredelport/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="nav-icon-link"
-          aria-label="LinkedIn"
-        >
-          <img src={LinkedIn} alt="LinkedIn" className="nav-icon" />
-        </a>
-
-        <button
-          className="nav-toggle"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-          aria-expanded={menuOpen}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-      </div>
+      <button
+        className="nav-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+        aria-expanded={menuOpen}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
     </nav>
   )
 }

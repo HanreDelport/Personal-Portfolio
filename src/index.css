@@ -7,6 +7,7 @@
   --color-purple: #c586c0;
   --color-text: #d4d4d4;
   --font-mono: 'Fira Code', 'JetBrains Mono', 'Source Code Pro', monospace;
+  --nav-height: 4.5rem;
   --font-heading: 'Space Grotesk', 'Inter', system-ui, sans-serif;
 
   /* glass tokens */
