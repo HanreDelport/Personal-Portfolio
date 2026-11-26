@@ -1,58 +1,53 @@
-import { useState } from 'react'
 import profilePic from '../assets/icons/HD.png'
+import PillNav from './PillNav'
 import './NavBar.css'
 
 const NAV_ITEMS = [
-  { id: 'about', label: 'About' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'resume', label: 'Resume' },
-  { id: 'contact', label: 'Contact' },
+  { label: 'About', href: '#about' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Resume', href: '#resume' },
+  { label: 'Contact', href: '#contact' },
 ]
 
-function Navbar({ activeCard, onNavigate, onHome }) {
-  const [menuOpen, setMenuOpen] = useState(false)
-
-  const handleNavigate = (id) => {
-    onNavigate(id)
-    setMenuOpen(false)
+// the logo links to "#", so send it to the top smoothly
+function NavAnchor({ href, onClick, ...props }) {
+  const handleClick = (e) => {
+    if (href === '#') {
+      e.preventDefault()
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+    onClick?.(e)
   }
+  return <a href={href} onClick={handleClick} {...props} />
+}
 
-  const handleHome = () => {
-    onHome()
-    setMenuOpen(false)
+function Navbar({ activeCard, onNavigate }) {
+  const handleItemClick = (item, _index, e) => {
+    e.preventDefault()
+    onNavigate(item.href.slice(1))
   }
 
   return (
-    <nav className="navbar">
-      <button className="nav-brand" onClick={handleHome} aria-label="Home">
-        <img src={profilePic} alt="Hanré Delport" className="nav-avatar" />
-      </button>
-
-      <ul className={`nav-links ${menuOpen ? 'nav-links-open' : ''}`}>
-        {NAV_ITEMS.map((item) => (
-          <li key={item.id}>
-            <button
-              className={`nav-link ${activeCard === item.id ? 'nav-link-active' : ''}`}
-              onClick={() => handleNavigate(item.id)}
-            >
-              {item.label}
-            </button>
-          </li>
-        ))}
-      </ul>
-
-      <button
-        className="nav-toggle"
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label="Toggle menu"
-        aria-expanded={menuOpen}
-      >
-        <span />
-        <span />
-        <span />
-      </button>
-    </nav>
+    <div className="navbar">
+      <PillNav
+        logo={profilePic}
+        logoAlt="Hanré Delport"
+        logoHref="#"
+        style={{ '--pn-mark': '44px' }}
+        linkComponent={NavAnchor}
+        items={NAV_ITEMS}
+        activeHref={activeCard ? `#${activeCard}` : ''}
+        onItemClick={handleItemClick}
+        itemStyle="pill"
+        hoverEffect="fill"
+        indicator="dot"
+        surface="solid"
+        barColor="#050507"
+        highlightColor="var(--color-purple)"
+        highlightTextColor="#050507"
+      />
+    </div>
   )
 }
 

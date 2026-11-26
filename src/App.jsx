@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="app">
       <Navbar activeCard={null} onNavigate={scrollToSection} onHome={goHome} />
-      <Hero />
+      <Hero onNavigate={scrollToSection} />
       <AboutMe />
       <Projects />
       <Skills />

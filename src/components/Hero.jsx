@@ -7,7 +7,7 @@ import './Hero.css'
 const FULL_TEXT = 'Hanré Delport'
 const NAME_START = 6 // "Hanré " (5 letters + space), so "Delport" gets the cyan
 
-function Hero() {
+function Hero({ onNavigate }) {
   const [displayedText, setDisplayedText] = useState('')
   const root = useRef(null)
 
@@ -51,6 +51,15 @@ function Hero() {
         <p className="hero-fade hero-sub">
           IT student building full-stack software and data-driven applications.
         </p>
+
+        <div className="hero-fade hero-cta">
+          <button type="button" className="hero-btn" onClick={() => onNavigate('projects')}>
+            View projects
+          </button>
+          <button type="button" className="hero-btn" onClick={() => onNavigate('contact')}>
+            Get in touch
+          </button>
+        </div>
       </div>
 
       <div className="hero-intro">

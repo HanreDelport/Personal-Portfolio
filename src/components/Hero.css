@@ -53,6 +53,33 @@
   animation: blink 1s step-end infinite;
 }
 
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.hero-btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  background: var(--color-bg);
+  border: 1px solid color-mix(in srgb, var(--color-purple) 45%, transparent);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  color: var(--color-purple);
+  border-color: var(--color-purple);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--color-purple) 40%, transparent);
+}
+
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
