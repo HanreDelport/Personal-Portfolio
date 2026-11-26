@@ -20,6 +20,7 @@
 html {
   background-color: #050507;
 }
+
 body {
   background-color: transparent;
   color: var(--color-text);
@@ -27,7 +28,7 @@ body {
   min-height: 100vh;
 }
 
-/* ambient glows behind the glass */
+/* ambient glows behind the glass*/
 body::before {
   content: '';
   position: fixed;
@@ -35,9 +36,9 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(600px circle at 15% 20%, rgba(77, 208, 225, 0.14), transparent 60%),
-    radial-gradient(700px circle at 85% 70%, rgba(197, 134, 192, 0.12), transparent 60%),
-    radial-gradient(500px circle at 60% 10%, rgba(255, 157, 92, 0.07), transparent 60%);
+    radial-gradient(600px circle at 15% 20%, rgba(77, 208, 225, 0.2), transparent 60%),
+    radial-gradient(700px circle at 85% 70%, rgba(197, 134, 192, 0.2), transparent 60%),
+    radial-gradient(500px circle at 60% 10%, rgba(255, 157, 92, 0.2), transparent 60%);
 }
 
 h1, h2, h3 {
