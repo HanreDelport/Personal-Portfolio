@@ -13,7 +13,7 @@
   /* glass tokens */
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-bg-strong: rgba(14, 14, 18, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.02);
   --glass-blur: blur(16px) saturate(140%);
 }
 
@@ -48,9 +48,9 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(600px circle at 15% 20%, rgba(77, 208, 225, 0.2), transparent 60%),
-    radial-gradient(700px circle at 85% 70%, rgba(197, 134, 192, 0.2), transparent 60%),
-    radial-gradient(500px circle at 60% 10%, rgba(255, 157, 92, 0.2), transparent 60%);
+    radial-gradient(600px circle at 15% 20%, rgba(77, 208, 225, 0.2), transparent 40%),
+    radial-gradient(700px circle at 85% 70%, rgba(197, 134, 192, 0.2), transparent 40%),
+    radial-gradient(500px circle at 60% 10%, rgba(255, 157, 92, 0.2), transparent 40%);
 }
 
 h1, h2, h3 {

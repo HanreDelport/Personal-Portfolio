@@ -1,0 +1,98 @@
+.projects-wrap {
+  --section-pad: clamp(1.5rem, 6vw, 6rem); /* same clamp as .section */
+  --card-w: min(76vw, 62rem);
+  --card-h: max(360px, calc(100svh - var(--nav-height) - 11rem));
+  width: calc(100% + 2 * var(--section-pad));
+  margin-left: calc(-1 * var(--section-pad));
+}
+
+.projects-track {
+  position: relative;
+  height: calc(var(--card-h) + 2rem);
+  overflow: hidden;
+  touch-action: pan-y; /* vertical swipes still scroll the page */
+  user-select: none;
+  cursor: grab;
+  outline: none;
+}
+
+.projects-track:active {
+  cursor: grabbing;
+}
+
+/* the button is centred; JS moves the inner face. GSAP's reveal only touches the button */
+.project-card {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  width: var(--card-w);
+  height: var(--card-h);
+  margin-left: calc(var(--card-w) / -2);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: inherit;
+}
+
+.project-card-face {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  will-change: transform, filter;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover .project-card-face,
+.project-card:focus-visible .project-card-face {
+  border-color: var(--color-purple);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--color-purple) 40%, transparent);
+}
+
+.project-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.04);
+}
+
+.project-card-info {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 3rem 1.5rem 1.5rem;
+  background: linear-gradient(to top, rgba(5, 5, 7, 0.9), transparent);
+}
+
+.project-card-title {
+  color: var(--color-cyan);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.3rem, 2.4vw, 2rem);
+}
+
+.project-card-sub {
+  color: var(--color-purple);
+  font-size: 0.85rem;
+}
+
+.project-card-hint {
+  margin-top: 0.5rem;
+  color: var(--color-orange);
+  font-size: 0.85rem;
+}

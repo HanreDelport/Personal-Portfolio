@@ -33,6 +33,17 @@ export function initScrollReveals() {
       })
     })
 
+    gsap.utils.toArray('.projects-track').forEach((track) => {
+      gsap.from(track.children, {
+        opacity: 0,
+        y: 50,
+        duration: 0.9,
+        stagger: 0.12,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: track, start: 'top 85%', toggleActions: REPLAY },
+      })
+    })
+
     gsap.from('.resume-thumbnail-link, .resume-caption', {
       opacity: 0,
       y: 40,
