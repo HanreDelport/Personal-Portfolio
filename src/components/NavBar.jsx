@@ -1,3 +1,4 @@
+import { scrollToTarget } from '../lib/smoothScroll'
 import profilePic from '../assets/icons/HD.png'
 import PillNav from './PillNav'
 import './NavBar.css'
@@ -15,7 +16,7 @@ function NavAnchor({ href, onClick, ...props }) {
   const handleClick = (e) => {
     if (href === '#') {
       e.preventDefault()
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+      scrollToTarget(0)
     }
     onClick?.(e)
   }

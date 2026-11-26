@@ -1,10 +1,8 @@
 .hero {
-  min-height: 100vh;
-  min-height: 100svh;
   display: flex;
   align-items: center;
   gap: clamp(2rem, 5vw, 5rem);
-  padding: 6rem clamp(1.5rem, 6vw, 6rem) 3rem;
+  padding: var(--nav-height) clamp(1.5rem, 6vw, 6rem) 2rem;
 }
 
 .hero-main {
@@ -80,6 +78,16 @@
   box-shadow: 0 0 18px color-mix(in srgb, var(--color-purple) 40%, transparent);
 }
 
+.home {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home .hero {
+  flex: 1;
+}
+
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -90,8 +98,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    min-height: 100svh;
-    padding-top: 5.5rem;
   }
 
   .hero-main,
