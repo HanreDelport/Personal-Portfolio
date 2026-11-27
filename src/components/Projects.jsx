@@ -1,5 +1,7 @@
-import { useEffect ,useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Section from './Section'
+import ProjectOverlay from './ProjectOverlay'
+import { stopScroll, startScroll } from '../lib/smoothScroll'
 import './Projects.css'
 
 import dijkstraTNail from '../assets/projectPics/Dijkstra.png'
@@ -85,6 +87,8 @@ const WHEEL_K = 0.004 // cards per wheel pixel
 const COUNT = projects.length
 
 function Projects() {
+  const [active, setActive] = useState(null) // { index, rect }
+  const triggerRef = useRef(null)
   const trackRef = useRef(null)
   const wakeRef = useRef(() => {})
   const s = useRef({
@@ -273,7 +277,17 @@ function Projects() {
   }
 
   const openProject = (index) => {
-    // step 2: expand to full screen
+    const card = trackRef.current.children[index]
+    triggerRef.current = card
+    const rect = card.firstElementChild.getBoundingClientRect()
+    stopScroll()
+    setActive({ index, rect })
+  }
+
+  const closeProject = () => {
+    setActive(null)
+    startScroll()
+    triggerRef.current?.focus({ preventScroll: true })
   }
 
   // clicking a side card brings it to the centre; clicking the centre card opens it
@@ -313,6 +327,14 @@ function Projects() {
           ))}
         </div>
       </div>
+        {active && (
+          <ProjectOverlay
+            project={projects[active.index]}
+            fromRect={active.rect}
+            getRect={() => trackRef.current.children[active.index].firstElementChild.getBoundingClientRect()}
+            onClosed={closeProject}
+          />
+        )}
     </Section>
   )
 }

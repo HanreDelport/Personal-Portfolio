@@ -31,3 +31,14 @@ export function scrollToTarget(target) {
   if (lenis) lenis.scrollTo(top, { offset })
   else window.scrollTo({ top: top + offset, behavior: 'smooth' })
 }
+
+// lock/unlock page scroll (used by the project overlay)
+export function stopScroll() {
+  if (lenis) lenis.stop()
+  else document.body.style.overflow = 'hidden' // reduced-motion: no Lenis
+}
+
+export function startScroll() {
+  if (lenis) lenis.start()
+  else document.body.style.overflow = ''
+}
