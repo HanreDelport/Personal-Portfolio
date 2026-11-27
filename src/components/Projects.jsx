@@ -82,7 +82,7 @@ const carouselItems = projects.map((p) => ({
 
 const clamp = (v, min, max) => Math.min(max, Math.max(min, v))
 
-const GAP = 24 // px between cards
+const GAP = 80 // px between cards
 const WHEEL_K = 0.004 // cards per wheel pixel
 const COUNT = projects.length
 
@@ -316,15 +316,21 @@ function Projects() {
           {projects.map((p, i) => (
             <button key={p.title} type="button" className="project-card" onClick={() => onCardClick(i)}>
               <span className="project-card-face">
-                <img src={p.image} alt={p.title} draggable={false} />
+                <span className="project-card-media">
+                  <img src={p.image} alt={p.title} draggable={false} />
+                </span>
                 <span className="project-card-info">
-                  <span className="project-card-title">{p.title}</span>
+                  <span className="project-card-head">
+                    <img src={p.icon} alt="" className="project-card-icon" draggable={false} />
+                    <span className="project-card-title">{p.title}</span>
+                  </span>
                   <span className="project-card-sub">{p.subtitle}</span>
                   <span className="project-card-hint">View project →</span>
                 </span>
               </span>
             </button>
           ))}
+
         </div>
       </div>
         {active && (
